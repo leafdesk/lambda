@@ -1,0 +1,27 @@
+service: ai-telephony-agent
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-2
+
+functions:
+  telephonyAgent:
+    handler: src/handler.handler
+    events:
+      - http:
+          path: chat
+          method: post
+
+package:
+  exclude:
+    - node_modules/**
+    - .serverless/**
+    - .git/**
+    - .gitignore
+    - .DS_Store
+    - dist/**
+    - coverage/**
+    - .env
+    - .idea/**
+    - .vscode/**
