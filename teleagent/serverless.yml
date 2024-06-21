@@ -7,11 +7,14 @@ provider:
 
 functions:
   telephonyAgent:
-    handler: src/handler.handler
+    handler: dist/handler.handler
     events:
       - http:
           path: chat
           method: post
+
+plugins:
+  - serverless-offline
 
 package:
   exclude:
@@ -20,8 +23,9 @@ package:
     - .git/**
     - .gitignore
     - .DS_Store
-    - dist/**
+    # - dist/**
     - coverage/**
     - .env
     - .idea/**
     - .vscode/**
+    - .prettierrc
