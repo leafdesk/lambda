@@ -1,0 +1,29 @@
+{
+  "name": "chat-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "pnpm run build && serverless offline",
+    "deploy": "pnpm run build && serverless deploy",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.602.0",
+    "@aws-sdk/lib-dynamodb": "^3.602.0",
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.140",
+    "@types/node": "^20.14.7",
+    "nodemon": "^3.1.4",
+    "serverless": "^4.1.5",
+    "serverless-offline": "^13.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
+}
