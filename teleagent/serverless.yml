@@ -4,6 +4,9 @@ provider:
   name: aws
   runtime: nodejs20.x
   region: ap-northeast-2
+  environment:
+    AWS_ACCESS_KEY_ID: ${env:AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${env:AWS_SECRET_ACCESS_KEY}
 
 functions:
   telephonyAgent:
@@ -12,9 +15,13 @@ functions:
       - http:
           path: chat
           method: post
+      - http:
+          path: chat
+          method: get
 
 plugins:
   - serverless-offline
+  - serverless-dotenv-plugin
 
 package:
   exclude:
