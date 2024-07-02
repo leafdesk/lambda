@@ -7,10 +7,10 @@ import {
 } from '@aws-sdk/lib-dynamodb'
 
 const client = new DynamoDBClient({
-  region: process.env.AWS_REGION,
+  region: process.env.TELEAGENT_AWS_REGION,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+    accessKeyId: process.env.TELEAGENT_AWS_ACCESS_KEY!,
+    secretAccessKey: process.env.TELEAGENT_AWS_SECRET_ACCESS_KEY!,
   },
 })
 

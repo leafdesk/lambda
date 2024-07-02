@@ -7,7 +7,7 @@ provider:
 
 functions:
   telephonyAgent:
-    handler: dist/handler.handler
+    handler: dist/handlers/router.route
     events:
       - http:
           path: chat
@@ -15,6 +15,9 @@ functions:
       - http:
           path: chat
           method: get
+      - http:
+          path: inbound
+          method: post
 
 plugins:
   - serverless-offline
@@ -27,7 +30,6 @@ package:
     - .git/**
     - .gitignore
     - .DS_Store
-    # - dist/**
     - coverage/**
     - .env
     - .idea/**
