@@ -5,6 +5,10 @@ export const handlePostInbound = async (
 ): Promise<APIGatewayProxyResult> => {
   return {
     statusCode: 200,
-    body: JSON.stringify({ ok: true, message: 'handlePostInbound.' }),
+    body: JSON.stringify({
+      ok: true,
+      message: 'handlePostInbound.',
+      NextAction: '1',
+    }),
   }
 }

@@ -3,7 +3,7 @@ import {
   getChatSession,
   saveChatSession,
   updateChatSession,
-} from '../chat-service'
+} from '../services/chat-service'
 
 /**
  * GET /chat 요청.
