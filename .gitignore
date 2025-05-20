@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Serverless directories
+.serverless/
+
+# Other potential excludes
+.DS_Store
+.idea/
+.vscode/
+dist/
+coverage/
+.env
+.env.local
